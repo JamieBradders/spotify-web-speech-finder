@@ -1,0 +1,45 @@
+h1, h2, h3, h4, h5, h6, ul, li, p {
+    color: #666;
+}
+
+.search-results {
+    display: none;
+    padding-top: 45px;
+}
+
+.search-results a {
+    color: #666;
+}
+
+.search-button {
+    background: #2ebd59;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    text-align: center;
+    margin: 50px auto;
+    cursor: pointer;
+    position: relative;
+}
+
+.search-button p {
+    position: relative;
+    top: 43%;
+    color: #efefef;
+}
+
+.artist-image {
+    height: 250px;
+    width: 250px;
+    margin: 0 auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.artist-list-item {
+    text-align: center;
+}
+
+.artist-link-wrap {
+    text-transform: uppercase;
+}

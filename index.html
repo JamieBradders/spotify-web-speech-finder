@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Web Speech API Tutorial</title>
+    <link href="/assets/styles/vendor/foundation/css/foundation.min.css" rel="stylesheet">
+    <link href="/assets/styles/vendor/animate.css" rel="stylesheet">
+    <link href="/assets/styles/style.css" rel="stylesheet">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+    <script type="text/javascript" src="/assets/scripts/vendor/jquery.min.js"></script>
+    <script type="text/javascript" src="/assets/scripts/app.js"></script>
+</head>
+
+<body ng-app="webSpeechSpotifyApp" ng-controller="searchController as app">
+
+<div class="row text-center">
+    <div class="search-button animated bounce" ng-click="activateSpeech()">
+        <p>Search Now</p>
+    </div>
+</div>
+
+<div class="search-results animated row">
+    <!-- Results -->
+    <ul>
+        <div ng-repeat="image in artist.images">
+            <div class="artist-image" ng-show="$first" alt="{{artist.name}}" ng-style="{'background-image':'url({{image.url}})'}"></div>
+        </div>    
+        <li ng-repeat="artist in app.artists">{{ artist.name }}</li>
+    </ul>
+    <!-- Kept this code as a draft, need to come back to this and refactor... -->
+    <!-- <ul class="small-block-grid-3">
+        <li ng-repeat="artist in app.artists">
+            <div class="artist-list-item">
+                <div ng-repeat="image in artist.images">
+                    <div class="artist-image" ng-show="$first" alt="{{artist.name}}" ng-style="{'background-image':'url({{image.url}})'}"></div>
+                </div>
+                <div class="artist-link-wrap">
+                    <a class="artist-link" href="{{artist.href}}">{{artist.name}}</a>
+                </div>
+            </div>
+        </li>
+    </ul> -->
+</div>
+
+<!-- About the app -->
+<div class="row about-app">
+    <div class="large-12 columns">
+        <p>This is a very simple and rough web app that lets you search for artists on spotify using the Web Speech API. This current build uses AngularJS to make a http request to the Spotify Web API and return a list of artists that match the criteria you have provided. In the near future I plan to work on this web app and extend the functionality with the help of Spotify's API.<p>
+    </div>
+    <div class="large-12 columns">
+        <p>To use this app, simply click on the search now button and allow the browser to use your computer's microphone. Simply say the name of the artist you are looking for and wait for the results to come back.</p> 
+    </div>    
+</div>
+
+</body>
+</html>

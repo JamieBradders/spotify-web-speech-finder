@@ -1,0 +1,15 @@
+{
+  "name": "web-speech-spotify",
+  "version": "1.0.0",
+  "description": "Spotify search using web speech api",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Jamie Bradley",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.12.4"
+  }
+}
